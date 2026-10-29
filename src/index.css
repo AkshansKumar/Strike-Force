@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  overscroll-behavior: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+canvas {
+  display: block;
+  touch-action: none;
+}
+
+.safe-top {
+  top: max(0.75rem, env(safe-area-inset-top));
+}
+
+.safe-bottom {
+  bottom: max(1rem, env(safe-area-inset-bottom));
+}
